@@ -1,0 +1,302 @@
+<body>
+
+<meta charset="utf-8">
+
+	<script>
+	
+
+/*Задание №7. Циклы (for)
+Даны два целых числа a и b (a &lt; b). Найдите сумму всех целых чисел от a до b
+включительно.*/
+
+var a = 6;
+var b = 10;
+var res1 = 0;
+for (i = 0; a <= b; i ++){
+	res1 += a ++;
+	console.log (res1);
+} // промежуточные рез-ты выводятся тоже
+
+
+ 
+/*Задание №8. Циклы (for)
+Дано целое число n (n &gt; 0). Найдите произведение n! = 1 * 2 * … * n.*/
+ 
+var n = 8;
+var res = 1;
+	for (var i = 1; i <= n; i ++){
+	res *= i;
+	console.log(res);
+	} // промежуточные рез-ты
+	
+
+/*Задание №10. Циклы
+Даны целые числа a и b (a &lt; b). Выведите все целые числа от a до b
+включительно; при этом число a должно выводиться 1 раз, число a + 1 должно
+выводиться 2 раза и т.д.*/
+
+/*var a1 = 5;
+var b1 = 9;
+var res10 = 0;
+for (var i = a1; i <= b1; i++ ){
+
+console.log ( i)
+
+}	*/
+	
+	/*Задание №11. Функции
+Напишите функцию pow(x, n), которая возвращает x в степени n. Иначе говоря,
+умножает x на себя n раз и возвращает результат.*/
+
+function pow(f, n) {
+  var result = 1;
+
+  for (var i = 1; i <= n; i++) {
+    result *= f;
+  }
+  return result;
+} 
+console.log (pow(3,6)); 
+	
+	/*Задание №12. Функции
+Напишите функцию minMax(x, y), которая возвращает минимальное из x и y.*/
+
+/*function minMax (x, y){
+		
+	if (x < y) { 
+		var res12 = x;
+		return res12;
+		
+	} else { 
+		var res13 = y; 
+		return res13;
+	}
+ }
+ console.log (minMax (13, 9)); // если x > y выдает undefined*/
+ 
+ function minMax (x, y){
+		
+	if (x < y) { 
+		return x;	
+	} else { 
+		return y;
+	}
+ }
+  console.log (minMax (1, 9));
+ 
+ 
+ function minMax (x, y){
+		
+		return (x < y) ? x : y	
+	}
+ console.log (minMax (44, 30));
+	
+/*Задание №13. Функции
+Напишите функцию sign(x) целого типа, возвращающую для вещественного
+числа X следующие значения:
+– -1, если x &lt; 0;
+– 0, если x = 0;
+– 1, если x &gt; 0.*/
+
+function sin(x) {
+	if (x < 0) {
+		var X = -1;
+	}else if (x > 0) {
+		var X = 1;
+	} else  {
+		var X = 0;
+	}
+return X;
+}
+console.log (sin(0));
+
+
+
+/*Задание №14. Функции
+Напишите функцию calc(a, b, op), которая выполняет над числами a и b одну из
+арифметических операций и возвращает ее результат. Вид операции определяется
+целым числом op: 1 – вычитание, 2 – умножение, 3 – деление, остальные значения –
+сложение.*/
+
+/*function calc (a, b, op) {
+	if (op = 1) {
+		var res14 = a - b;
+		return res14;
+	
+	} else if (op = 2) {
+		var res15 = a * b;
+		return res15;
+	
+	} else if (op = 3) {
+		var res16 = a / b;
+		return res16;
+	
+	} else {
+		var res17 = a+b;
+		return res17;
+	}	
+}
+console.log (calc(12, 5, 3));*/
+
+
+function calc (a, b, op) {
+	if (op = 1) {
+		var res14 = a - b;
+		
+	} else if (op = 2) {
+		var res14 = a * b;
+		
+	} else if (op = 3) {
+		var res14 = a / b;
+		
+	} else {
+		var res14 = a+b;
+		
+	}
+	return res14;
+}
+console.log (calc(12, 5, 3));
+
+function calc (a, b, op) {
+	
+	switch (op) {
+		
+		case 1 :
+			return a - b;
+		
+		case 2:
+			return a * b;
+		
+		case 3:
+			return a / b;
+		
+		default:
+			return a + b;
+	}
+}
+console.log (calc(1, 6, 1));
+
+/*Задание №1. Функциональные выражения
+Есть следующее определение функции:
+function add(x, y) {
+return x + y;
+}
+Перепишете определение функции add() используя синтаксис Function
+Expression.*/
+
+
+var add = function (x, y) {
+	return x + y;
+}
+console.log (add (3, 5));
+
+/*Задание №2. Замыкания
+Есть следующий код:
+function createArrayIterator(array) {
+// Ваш код
+}
+var arr = [5, 6, 7];
+var itr = createArrayIterator(arr);
+console.log(itr()); // 5
+console.log(itr()); // 6
+console.log(itr()); // 7
+console.log(itr()); // undefined
+Допишите код, чтобы функция createArrayIterator() возвращала функцию-
+перечислитель для массива, который задается через параметр array.*/
+	
+	
+function createArrayIterator(arr) {	
+	var i = 0;
+		return function (){
+			return arr [i++];
+		}
+};
+var arr = [5, 6, 7];
+var itr = createArrayIterator(arr);
+console.log (itr());
+console.log (itr());
+console.log (itr());
+
+function createArrayIterator(arr) {	
+	var i = 0;
+		return function (){
+			return arr [i++];
+		}
+};
+var arr = [5, 6, 7];
+var itr = createArrayIterator(arr);
+console.log (itr());
+console.log (itr());
+console.log (itr());
+
+/*Задание №3. Замыкания
+Напишите код для &quot;безопасного&quot; вычисления периметра и площади
+прямоугольника.
+Сторонами прямоугольника может быть только число (тип данных Number,
+значения других типов данных нельзя устанавливать), значение которого, строго
+больше 0.*/
+
+/*function createSafePer (side1) {
+	
+	var side2 = 3;
+	function inner () {
+		return side1 * side2;
+	}
+	return inner
+}	
+
+console.log (createSafePer(5)());*/
+
+function createSafePer (side1, side2) {
+	
+	function kontrol1 (newSide2) {
+		if (typeof newSide2 > 0 && newSide2 === Number){
+		side2 = newSide2;
+		}
+			return kontrol1();
+		}
+			function kontrol2 (newSide1){
+		if (typeof newSide1 > 0 && newSide1 === Number){
+		side1 = newSide1;
+		}
+		return kontrol2();
+
+	} ыыы
+		var res = side1 * side2;
+		return res;
+		
+	}
+	
+
+console.log (createSafePer (-2, 3));// Работает с отрицательным числом
+
+
+/*Задание №4. Рекурсивные функции
+Напишите рекурсивную функцию digitSum(k), которая находит сумму цифр
+целого числа k, не используя циклы.*/
+
+function sum (k) {
+	if (k ==1) {
+		return 1;
+	}else {
+		return (k + (k-1));
+	}
+} 
+console.log (sum (5));
+
+
+
+
+
+
+
+	
+	</script>
+
+
+
+</body>
+
+
+
+
