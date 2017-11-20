@@ -1,0 +1,102 @@
+
+<body>
+
+<meta charset="utf-8">
+
+	<script>
+
+/*Задание №1. Функциональные выражения
+Есть следующее определение функции:
+function add(x, y) {
+return x + y;
+}
+Перепишете определение функции add() используя синтаксис Function
+Expression.*/
+
+
+var add = function (x, y) {
+	return x + y;
+}
+console.log (add (3, 5));
+
+/*Задание №2. Замыкания
+Есть следующий код:
+function createArrayIterator(array) {
+// Ваш код
+}
+var arr = [5, 6, 7];
+var itr = createArrayIterator(arr);
+console.log(itr()); // 5
+console.log(itr()); // 6
+console.log(itr()); // 7
+console.log(itr()); // undefined
+Допишите код, чтобы функция createArrayIterator() возвращала функцию-
+перечислитель для массива, который задается через параметр array.*/
+	
+	
+function createArrayIterator(arr) {	
+	var i = 0;
+		return function (){
+			return arr [i++];
+		}
+};
+var arr = [5, 6, 7];
+var itr = createArrayIterator(arr);
+console.log (itr());
+console.log (itr());
+console.log (itr());
+ 
+ 
+
+
+/*Задание №3. Замыкания
+Напишите код для &quot;безопасного&quot; вычисления периметра и площади
+прямоугольника.
+Сторонами прямоугольника может быть только число (тип данных Number,
+значения других типов данных нельзя устанавливать), значение которого, строго
+больше 0.*/
+
+/*function createSafePer (side1) {
+	
+	var side2 = 3;
+	function inner () {
+		return side1 * side2;
+	}
+	return inner
+}
+
+console.log (createSafePer(5)());*/
+
+/*function createSafePer (side1, side2) {
+	var side1;
+	var side2;
+	function per () {
+		if (0 < side1 && side1 === Number)
+		
+		return side1 * side2;
+	}
+	function sqw () {
+		if (0 < side1 && side1 === Number)
+		
+		return 2 * side1 + 2 * side2;
+	}
+	return per;
+	return sqw;
+}	;
+
+console.log (createSafePer(5,3));*/
+
+
+
+</script>
+
+
+
+</body>
+
+
+
+
+
+
+
