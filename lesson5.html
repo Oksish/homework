@@ -1,0 +1,171 @@
+<body>
+
+<meta charset="utf-8">
+
+	<script>
+	
+var user = {
+	name: "Cris",
+	surname: "Simons",
+	name: "Brain",
+	display: function () {
+	console.log (user.name);
+	}
+};
+
+user.display ();
+delete user.name;
+user.display ();
+
+
+/*standart*/
+
+	var car = {};
+		car.model = "BMW";
+		car.speed = 80;
+		car.run = "car.model едет со скоростью car.speed";
+		car.stop = "car.model остановилась";
+		car.display = function () {
+		console.log (car.model);
+		console.log (car.speed);
+		console.log (car.run);
+		console.log (car.stop);
+	}
+car.display ();
+
+/*arr*/
+
+	var car = {};
+		car["model"] = "BMW";
+		car["speed"] = 80;
+		car["run"] = car.model + "едет со скоростью" + car.speed,
+		car["stop"] = car.model + "остановилась",
+		car["display"] = function () {
+		console.log (car.model);
+		console.log (car.speed);
+		console.log (car.run);
+		console.log (car.stop);
+	}
+car["display"] ();
+
+/*simple*/
+
+	var car = {
+		model: "BMW",	
+		speed: 80,
+		run: car.model + " едет со скоростью " + car.speed,
+		stop: car.model + " остановилась",
+		display: function () {
+		console.log (car.run);
+		console.log (car.stop);
+	}
+};
+
+car.display ();
+
+
+
+var tv = {
+		currentChannel: 1,	
+		nextChannel: function (){
+			tv.currentChannel++
+			},
+		previousChannel: function () {
+			tv.currentChannel--
+			},
+		setChannel: function (number) {
+			if (number) {
+				tv.currentChannel = number
+				}
+			},
+		display: function () {
+		console.log (1);
+		console.log (tv.nextChannel);
+		console.log (tv.previousChannel);
+		console.log (tv.setChannel);
+	}
+};
+
+tv.display ();
+
+var employeers = {
+		beginner: {
+			name: "John",
+			age: 28,
+			experiense: 1,
+			languages: ["Java", "JavaScript", "SQL"]		
+			},
+		junior: {
+			name: "Bill",
+			age: 30,
+			experiense: 5,
+			languages: ["HTML", "CSS", "JavaScript"]		
+			},
+		senior: {
+			name: "Mike",
+			age: 32,
+			experiense: 4,
+			languages: ["Python", "SQL"]		
+			},
+	display: function () {
+		console.log (employeers.beginner);
+		console.log (employeers.junior);
+		console.log (employeers.senior);
+}
+};
+
+employeers.display()
+
+
+/*function employeers()
+var employeers = {*/
+
+	
+
+	function isEmpty() {
+	for (var key in schedule) {
+	return false
+	}
+	return true
+};
+
+var schedule = {};
+
+console.log ( isEmpty(schedule) );
+
+schedule["8:30"] = "подъём";
+console.log ( isEmpty(schedule) );
+
+
+var salaries = {
+	john: 100,
+	bill: 300,
+	mike: 250
+};
+
+for (var key in salaries) {
+	console.log (salaries[key] /2)
+};
+
+var arr = [66, 10, 3, 9, 4, 1, 30]
+function quickSort () {
+	var i = 0;
+	var j = arr.lenght - 1;  //supportingElement
+	var k = (i + j) / 2;
+		if (arr[i] <arr[k]) i++ ;{
+			return arr[i]
+		} 
+}
+
+console.log (quickSort ())
+
+
+	</script>
+
+
+
+</body>
+
+
+
+
