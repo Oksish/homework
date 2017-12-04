@@ -1,0 +1,69 @@
+<body>
+
+<meta charset="utf-8">
+
+	<script>
+	
+var mp3 = {
+		track: 1,
+		nextTrack: function () {
+			mp3.track++
+		},
+		previousTrack: function () {
+			mp3.track--
+		},
+		currentChannel: 1,	
+		nextChannel: function (){
+			mp3.currentChannel++
+			},
+		previousChannel: function () {
+			mp3.currentChannel--
+			},
+		setChannel: function (number) {
+			if (number) {
+				mp3.currentChannel = number
+				};
+				},
+		radio: function () {
+			mp3.currentChannel
+		},
+		playList: function() {
+			mp3.track
+		},   // options??
+		on: function () {
+			mp3.radio
+			},
+		off: function () {
+			mp3.stop
+			},
+		light1: green,
+		light2: red,
+		volume: 1,
+		loudVolume: function (){
+			mp3.volume++ + mp3.light2
+		},
+		lowVolume: function () {
+			mp3.volume-- + mp3.light1
+		},
+		
+		display: function () {
+		console.log (mp3.on());
+		console.log (mp3.previousChannel());
+		console.log (mp3.setChannel());
+	}
+};
+
+mp3.display ()
+
+
+
+
+	</script>
+
+
+
+</body>
+
+
+
+
